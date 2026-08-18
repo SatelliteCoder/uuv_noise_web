@@ -1,0 +1,58 @@
+{
+  "source_type": "point",
+  "noise_type": "UUV target radiated noise, semi-empirical",
+  "noise_components": [
+    "machinery broadband noise",
+    "machinery and motor tonal lines",
+    "shaft-frequency tonal lines",
+    "propeller blade-pass-frequency tonal lines",
+    "modulated propeller/cavitation broadband noise for DEMON preview",
+    "hull-flow broadband noise"
+  ],
+  "notice": "Engineering prototype only. Default parameters are illustrative and are not calibrated to a real UUV acoustic signature.",
+  "geometry": {
+    "type": "point",
+    "num_elements": 1,
+    "receiver_xyz_m": [
+      600,
+      160,
+      -45
+    ],
+    "source_center_xyz_m": [
+      0,
+      0,
+      -50
+    ]
+  },
+  "features": {
+    "shaft_hz": 12,
+    "bpf_hz": 48,
+    "tip_speed_mps": 9.0477868423386028,
+    "cavitation_activity": 0.45867847417739632
+  },
+  "metrics": {
+    "source_rms_uPa": 2.6682804432228003E+6,
+    "received_target_rms_uPa": 4027.2539219659725,
+    "ambient_rms_uPa": 800.00000000000011,
+    "received_mix_rms_uPa": 4036.4039490302534,
+    "preview_snr_db": 14.038380522694929
+  },
+  "files": {
+    "summary_png": "uuv_summary.png",
+    "spectrum_png": "uuv_source_spectrum.png",
+    "waveforms_png": "uuv_waveforms.png",
+    "spectrogram_png": "uuv_spectrogram.png",
+    "lofar_png": "uuv_lofar.png",
+    "demon_png": "uuv_demon.png",
+    "geometry_png": "uuv_source_geometry_3d.png",
+    "source_wav": "uuv_source_signal.wav",
+    "received_target_wav": "uuv_received_target.wav",
+    "received_mix_wav": "uuv_received_mix.wav",
+    "spectrum_csv": "uuv_source_spectrum.csv",
+    "tones_csv": "uuv_tonal_lines.csv",
+    "geometry_csv": "uuv_source_geometry.csv",
+    "mat_result": "uuv_source_model_result.mat",
+    "description_txt": "uuv_noise_description.txt",
+    "log_file": "matlab_stdout.log"
+  }
+}

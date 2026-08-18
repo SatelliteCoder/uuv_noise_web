@@ -1,0 +1,31 @@
+UUV equivalent-source radiated-noise model
+==========================================
+
+Equivalent source type: point
+Number of source elements: 1
+Sampling rate: 24000 Hz
+Duration: 4.00 s
+
+This is not arbitrary white noise.
+It is a semi-empirical UUV target radiated-noise signal composed of:
+1. Machinery broadband noise.
+2. Machinery/electric-motor tonal lines.
+3. Shaft-frequency tonal lines.
+4. Propeller blade-pass-frequency (BPF) tonal lines and harmonics.
+5. Modulated propeller/cavitation broadband noise for DEMON features.
+6. Hull-flow broadband noise.
+
+Key features:
+Shaft frequency: 12.000 Hz
+Blade-pass frequency: 48.000 Hz
+Tip speed: 9.048 m/s
+Cavitation activity index: 0.459
+Preview SNR: 14.038 dB
+
+Main files:
+uuv_source_signal.wav: 1 m equivalent source signal preview.
+uuv_received_target.wav: simplified propagated target signal preview.
+uuv_received_mix.wav: target plus ambient preview signal.
+uuv_source_spectrum.csv: source-level spectrum and preview received level.
+uuv_tonal_lines.csv: shaft, BPF, and motor tonal-line table.
+uuv_source_geometry.csv: equivalent source element coordinates and weights.

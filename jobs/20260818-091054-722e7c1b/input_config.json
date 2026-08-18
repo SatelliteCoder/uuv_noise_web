@@ -1,0 +1,34 @@
+{
+  "source_type": "point",
+  "fs": 24000,
+  "duration_s": 4.0,
+  "random_seed": 20260817,
+  "uuv": {
+    "length_m": 3.2,
+    "diameter_m": 0.45,
+    "depth_m": 50.0,
+    "speed_mps": 3.0,
+    "rpm": 720.0,
+    "blade_count": 4,
+    "propeller_diameter_m": 0.24
+  },
+  "source": {
+    "heading_deg": 20.0,
+    "line_elements": 21,
+    "surface_axial_elements": 10,
+    "surface_circum_elements": 8,
+    "volume_axial_elements": 6,
+    "volume_radial_elements": 2,
+    "volume_circum_elements": 8
+  },
+  "receiver": {
+    "x_m": 600.0,
+    "y_m": 160.0,
+    "z_m": -45.0
+  },
+  "ambient": {
+    "enabled": true,
+    "rms_uPa": 800.0,
+    "slope_db_decade": -17.0
+  }
+}

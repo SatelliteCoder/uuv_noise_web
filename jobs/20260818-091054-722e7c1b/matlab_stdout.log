@@ -1,0 +1,11 @@
+[警告: 无法创建个人 MATLAB 工作文件夹 C:\Users\user\Documents\MATLAB。] 
+
+Running UUV point equivalent-source noise model...
+Noise content: machinery tones/broadband + shaft/BPF propeller tones + modulated propeller-cavitation broadband + flow broadband.
+Output folder: E:\HJ\uuv_noise_web_local\jobs\20260818-091054-722e7c1b
+Equivalent source type: point
+Source elements: 1
+Shaft frequency: 12.00 Hz
+Blade-pass frequency: 48.00 Hz
+Cavitation activity index: 0.46
+Preview SNR: 14.04 dB

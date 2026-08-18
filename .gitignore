@@ -1,0 +1,34 @@
+# Python runtime cache
+__pycache__/
+*.py[cod]
+
+# Local runtime state
+runtime/
+
+# MATLAB temporary/cache files
+*.asv
+*.m~
+slprj/
+sccprj/
+codegen/
+.matlab/
+*.prf
+*.p12
+*.pem
+epfwk_cache-*.json
+MLintDefaultSettings.txt
+migratePref.txt
+
+# Keep one successful demo job in version control; ignore other local jobs.
+jobs/*
+!jobs/20260818-091054-722e7c1b/
+!jobs/20260818-091054-722e7c1b/**
+
+# Ignore copied MATLAB model example outputs; web jobs hold the demo output.
+matlab_model/output/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

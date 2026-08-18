@@ -1,0 +1,125 @@
+{
+  "job_id": "20260818-091054-722e7c1b",
+  "status": "succeeded",
+  "message": "仿真完成",
+  "created_at": "2026-08-18T09:10:54+08:00",
+  "updated_at": "2026-08-18T09:11:39+08:00",
+  "config": {
+    "source_type": "point",
+    "fs": 24000,
+    "duration_s": 4.0,
+    "random_seed": 20260817,
+    "uuv": {
+      "length_m": 3.2,
+      "diameter_m": 0.45,
+      "depth_m": 50.0,
+      "speed_mps": 3.0,
+      "rpm": 720.0,
+      "blade_count": 4,
+      "propeller_diameter_m": 0.24
+    },
+    "source": {
+      "heading_deg": 20.0,
+      "line_elements": 21,
+      "surface_axial_elements": 10,
+      "surface_circum_elements": 8,
+      "volume_axial_elements": 6,
+      "volume_radial_elements": 2,
+      "volume_circum_elements": 8
+    },
+    "receiver": {
+      "x_m": 600.0,
+      "y_m": 160.0,
+      "z_m": -45.0
+    },
+    "ambient": {
+      "enabled": true,
+      "rms_uPa": 800.0,
+      "slope_db_decade": -17.0
+    }
+  },
+  "cases": [
+    {
+      "source_type": "point",
+      "noise_type": "UUV target radiated noise, semi-empirical",
+      "noise_components": [
+        "machinery broadband noise",
+        "machinery and motor tonal lines",
+        "shaft-frequency tonal lines",
+        "propeller blade-pass-frequency tonal lines",
+        "modulated propeller/cavitation broadband noise for DEMON preview",
+        "hull-flow broadband noise"
+      ],
+      "notice": "Engineering prototype only. Default parameters are illustrative and are not calibrated to a real UUV acoustic signature.",
+      "geometry": {
+        "type": "point",
+        "num_elements": 1,
+        "receiver_xyz_m": [
+          600,
+          160,
+          -45
+        ],
+        "source_center_xyz_m": [
+          0,
+          0,
+          -50
+        ]
+      },
+      "features": {
+        "shaft_hz": 12,
+        "bpf_hz": 48,
+        "tip_speed_mps": 9.047786842338603,
+        "cavitation_activity": 0.4586784741773963
+      },
+      "metrics": {
+        "source_rms_uPa": 2668280.4432228003,
+        "received_target_rms_uPa": 4027.2539219659725,
+        "ambient_rms_uPa": 800.0000000000001,
+        "received_mix_rms_uPa": 4036.4039490302534,
+        "preview_snr_db": 14.03838052269493
+      },
+      "files": {
+        "summary_png": "uuv_summary.png",
+        "spectrum_png": "uuv_source_spectrum.png",
+        "waveforms_png": "uuv_waveforms.png",
+        "spectrogram_png": "uuv_spectrogram.png",
+        "lofar_png": "uuv_lofar.png",
+        "demon_png": "uuv_demon.png",
+        "geometry_png": "uuv_source_geometry_3d.png",
+        "source_wav": "uuv_source_signal.wav",
+        "received_target_wav": "uuv_received_target.wav",
+        "received_mix_wav": "uuv_received_mix.wav",
+        "spectrum_csv": "uuv_source_spectrum.csv",
+        "tones_csv": "uuv_tonal_lines.csv",
+        "geometry_csv": "uuv_source_geometry.csv",
+        "mat_result": "uuv_source_model_result.mat",
+        "description_txt": "uuv_noise_description.txt",
+        "log_file": "matlab_stdout.log"
+      },
+      "source_type_label": "点源",
+      "elapsed_s": 45.31,
+      "log_file": "matlab_stdout.log",
+      "file_urls": {
+        "summary_png": "/jobs/20260818-091054-722e7c1b/uuv_summary.png",
+        "spectrum_png": "/jobs/20260818-091054-722e7c1b/uuv_source_spectrum.png",
+        "waveforms_png": "/jobs/20260818-091054-722e7c1b/uuv_waveforms.png",
+        "spectrogram_png": "/jobs/20260818-091054-722e7c1b/uuv_spectrogram.png",
+        "lofar_png": "/jobs/20260818-091054-722e7c1b/uuv_lofar.png",
+        "demon_png": "/jobs/20260818-091054-722e7c1b/uuv_demon.png",
+        "geometry_png": "/jobs/20260818-091054-722e7c1b/uuv_source_geometry_3d.png",
+        "source_wav": "/jobs/20260818-091054-722e7c1b/uuv_source_signal.wav",
+        "received_target_wav": "/jobs/20260818-091054-722e7c1b/uuv_received_target.wav",
+        "received_mix_wav": "/jobs/20260818-091054-722e7c1b/uuv_received_mix.wav",
+        "spectrum_csv": "/jobs/20260818-091054-722e7c1b/uuv_source_spectrum.csv",
+        "tones_csv": "/jobs/20260818-091054-722e7c1b/uuv_tonal_lines.csv",
+        "geometry_csv": "/jobs/20260818-091054-722e7c1b/uuv_source_geometry.csv",
+        "mat_result": "/jobs/20260818-091054-722e7c1b/uuv_source_model_result.mat",
+        "description_txt": "/jobs/20260818-091054-722e7c1b/uuv_noise_description.txt",
+        "log_file": "/jobs/20260818-091054-722e7c1b/matlab_stdout.log"
+      }
+    }
+  ],
+  "started_at": "2026-08-18T09:10:54+08:00",
+  "current_case": "point",
+  "finished_at": "2026-08-18T09:11:39+08:00"
+}

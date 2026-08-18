@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UUV 目标辐射噪声仿真</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel control-panel" aria-label="仿真参数">
+        <div class="brand-row">
+          <div>
+            <h1>UUV 目标辐射噪声仿真</h1>
+            <p>半经验点/线/面/体等效声源，本地 MATLAB 计算内核</p>
+          </div>
+          <span id="healthBadge" class="badge">检测中</span>
+        </div>
+
+        <form id="simForm" class="form-grid">
+          <fieldset class="full">
+            <legend>等效声源</legend>
+            <div class="segmented" id="sourceSelector">
+              <button type="button" class="active" data-source="point">点源</button>
+              <button type="button" data-source="line">线源</button>
+              <button type="button" data-source="surface">面源</button>
+              <button type="button" data-source="volume">体源</button>
+              <button type="button" data-source="all">全部四类</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>UUV 参数</legend>
+            <label>艇长 m<input id="length_m" type="number" value="3.2" step="0.1" min="0.3" /></label>
+            <label>直径 m<input id="diameter_m" type="number" value="0.45" step="0.01" min="0.05" /></label>
+            <label>深度 m<input id="depth_m" type="number" value="50" step="1" min="1" /></label>
+            <label>航速 m/s<input id="speed_mps" type="number" value="3" step="0.1" min="0" /></label>
+            <label>转速 rpm<input id="rpm" type="number" value="720" step="10" min="10" /></label>
+            <label>桨叶数<input id="blade_count" type="number" value="4" step="1" min="2" /></label>
+            <label>桨径 m<input id="propeller_diameter_m" type="number" value="0.24" step="0.01" min="0.03" /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>采样与接收</legend>
+            <label>采样率 Hz<input id="fs" type="number" value="24000" step="1000" min="8000" /></label>
+            <label>时长 s<input id="duration_s" type="number" value="4" step="1" min="1" /></label>
+            <label>随机种子<input id="random_seed" type="number" value="20260817" step="1" min="1" /></label>
+            <label>接收 x m<input id="receiver_x_m" type="number" value="600" step="10" /></label>
+            <label>接收 y m<input id="receiver_y_m" type="number" value="160" step="10" /></label>
+            <label>接收 z m<input id="receiver_z_m" type="number" value="-45" step="1" /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>离散源数量</legend>
+            <label>线源点数<input id="line_elements" type="number" value="21" step="2" min="3" /></label>
+            <label>面源轴向<input id="surface_axial_elements" type="number" value="10" step="1" min="3" /></label>
+            <label>面源周向<input id="surface_circum_elements" type="number" value="8" step="1" min="4" /></label>
+            <label>体源轴向<input id="volume_axial_elements" type="number" value="6" step="1" min="3" /></label>
+            <label>体源径向<input id="volume_radial_elements" type="number" value="2" step="1" min="1" /></label>
+            <label>体源周向<input id="volume_circum_elements" type="number" value="8" step="1" min="4" /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>背景预览</legend>
+            <label class="check-row"><input id="ambient_enabled" type="checkbox" checked /> 接收混合信号叠加背景噪声</label>
+            <label>背景 RMS uPa<input id="ambient_rms_uPa" type="number" value="800" step="50" min="0" /></label>
+            <label>背景谱斜率 dB/dec<input id="ambient_slope_db_decade" type="number" value="-17" step="1" /></label>
+          </fieldset>
+
+          <div class="actions full">
+            <button id="runButton" class="primary" type="submit">运行仿真</button>
+            <span id="statusText" class="status-text">未运行</span>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel result-panel" aria-label="仿真结果">
+        <div class="result-head">
+          <div>
+            <h2>结果</h2>
+            <p id="resultSubtitle">选择声源类型后运行，结果会保存在本地 jobs 目录。</p>
+          </div>
+          <a id="jobFolderLink" class="ghost-link hidden" href="#">当前任务文件</a>
+        </div>
+        <div id="resultArea" class="empty-state">
+          <strong>等待仿真</strong>
+          <span>默认只运行点源；选择“全部四类”时才会依次生成四类结果。</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
