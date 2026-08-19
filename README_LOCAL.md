@@ -11,7 +11,7 @@ E:\HJ\uuv_noise_web_local
 在 PowerShell 中运行：
 
 ```powershell
-cd E:\HJ\uuv_noise_web_local
+cd E:uuv_noise_web_local
 python .\backend\server.py
 ```
 
