@@ -3,7 +3,7 @@
 这是一个不写入 GitHub 仓库的本地第一版系统，位置：
 
 ```text
-E:\HJ\uuv_noise_web_local
+E:\uuv_noise_web_local
 ```
 
 ## 启动
@@ -11,7 +11,7 @@ E:\HJ\uuv_noise_web_local
 在 PowerShell 中运行：
 
 ```powershell
-cd E:uuv_noise_web_local
+cd E:\uuv_noise_web_local
 python .\backend\server.py
 ```
 
